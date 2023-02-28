@@ -103,9 +103,9 @@ class User {
     WHERE userID = ?;    
     `;
 
-    db.query(strQry, [rq.params.id], (err, data) => {
+    db.query(strQry, [req.params.id], (err, data) => {
       if (err) throw err;
-      res.status(200).json({ result: data });
+    res.status(200).json({ result: data });
     });
   }
   getUsers(req, res) {
