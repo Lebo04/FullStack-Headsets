@@ -171,7 +171,7 @@ class Product {
     WHERE id = ?;    
     `;
 
-    db.query(strQry, [rq.params.id], (err, data) => {
+    db.query(strQry, [req.params.id], (err, data) => {
       if (err) throw err;
       res.status(200).json({ result: data });
     });
