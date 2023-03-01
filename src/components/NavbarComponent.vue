@@ -17,16 +17,16 @@
               <a class="page-scroll nav-link"><router-link to="/">Home</router-link></a>
             </li>
             <li class="nav-item">
-              <a class="page-scroll nav-link"><router-link to="/Admin">Admin</router-link></a>
+              <a class="page-scroll nav-link"><router-link to="/admin">Admin</router-link></a>
             </li>
             <li class="nav-item">
-              <a class="page-scroll nav-link"><router-link to="/Product">Products</router-link></a>
+              <a class="page-scroll nav-link"><router-link to="/products">Products</router-link></a>
             </li>
             <li class="nav-item">
-              <a class="page-scroll nav-link"><router-link to="/Login">Login</router-link></a>
+              <a class="page-scroll nav-link"><router-link to="/login">Login</router-link></a>
             </li>
             <li class="nav-item">
-              <a class="page-scroll nav-link"><router-link to="/Register">Register</router-link></a>
+              <a class="page-scroll nav-link"><router-link to="/register">Register</router-link></a>
             </li>
             <li class="nav-item">
               <a class="page-scroll nav-link"><router-link to="/Contact">Contact</router-link></a>
