@@ -8,6 +8,11 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/edit/:id',
+    name: 'edit',
+    component: () => import( '../components/UpdateUser.vue')
+  },
+  {
     path: '/admin',
     name: 'admin',
     component: () => import( '../views/AdminView.vue')
