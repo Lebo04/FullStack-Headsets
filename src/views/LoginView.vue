@@ -11,8 +11,9 @@
   </div> -->
 
   <div class="container">
-    <label for="name"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="name" required>
+
+    <label for="emailAdd"><b>Email</b></label>
+    <input type="text" placeholder="Enter email" name="email" required>
 
     <label for="pass"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="pass" required>
@@ -25,7 +26,10 @@
 
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancel">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+    <span class="psw">Forgot <a href="#">password?</a><br>
+      <router-link to="/register"><a href="">Sign up?</a></router-link>
+    </span>
+
   </div>
 </form>
 </div>
@@ -42,7 +46,7 @@ input[type=text], input[type=password] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid rgb(128, 128, 128);;
+  border: 1px solid rgb(128, 128, 128);
   box-sizing: border-box;
 }
 

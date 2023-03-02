@@ -25,9 +25,7 @@
             <li class="nav-item">
               <a class="page-scroll nav-link"><router-link to="/login">Login</router-link></a>
             </li>
-            <li class="nav-item">
-              <a class="page-scroll nav-link"><router-link to="/register">Register</router-link></a>
-            </li>
+
             <li class="nav-item">
               <a class="page-scroll nav-link"><router-link to="/Contact">Contact</router-link></a>
             </li>

@@ -34,11 +34,11 @@ export default{
             firstName: '',
             lastName: '',
             gender: '',
-            Cellphonenumber:'',
+            CellphoneNumber:'',
             Email: '',
             Password: '',
             UserProfile: 'https://i.postimg.cc/3rZ0H0D8/profile-Image.png',
-            Joindate: ''
+            JoinDate: ''
         };
         store.dispatch("fetchUserById", getLocation())
         // console.log(getLocation())
