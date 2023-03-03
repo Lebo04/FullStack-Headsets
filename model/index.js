@@ -34,7 +34,7 @@ class User {
     const strQry = `
         SELECT userID, firstName, lastName, gender, emailAdd, userPass, userRole, userProfile
         FROM Users
-        WHERE emailAdd = ${emailAdd};
+        WHERE emailAdd = '${emailAdd}';
     `;
 
     db.query(strQry, async (err, data) => {
@@ -44,18 +44,16 @@ class User {
       } else {
         await compare(userPass, data[0].userPass, (cErr, cResult) => {
           if (cErr) throw cErr;
-          // Create token
           const token = createToken({
             userPass,
             emailAdd,
           });
-          //---- Saving our token
           res.cookie("RightUser", token, {
             maxAge: 3600000,
             httpOnly: true,
           });
           if (cResult) {
-            request.status(200).json({
+            res.status(200).json({
               msg: "Logged In",
               token,
               result: data[0],
@@ -105,7 +103,7 @@ class User {
 
     db.query(strQry, [req.params.id], (err, data) => {
       if (err) throw err;
-    res.status(200).json({ result: data });
+      res.status(200).json({ result: data });
     });
   }
   getUsers(req, res) {
@@ -117,6 +115,22 @@ class User {
     db.query(strQry, (err, data) => {
       if (err) throw err;
       res.status(200).json({ results: data });
+    });
+  }
+   forgotPassword(req, res) {
+    const detail = req.body;
+    if (detail.userPass != null || detail.userPass != undefined)
+      detail.userPass = hashSync(detail.userPass, 15);
+
+    const strQry = `
+        UPDATE Users 
+        SET ?
+        WHERE cellphoneNum = ? and emailAdd = ?;
+        `;
+
+    db.query(strQry, [detail, req.params.id], (err) => {
+      if (err) throw err;
+      res.status(200).json({ msg: "A record was updated" });
     });
   }
 }

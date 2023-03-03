@@ -7,14 +7,14 @@ const { Product, User } = require("../model");
 const user = new User();
 const product = new Product();
 
-route.get('^/$|/cypher', (req, res) => {
+route.get("^/$|/cypher", (req, res) => {
   res.status(200).sendFile(path.join(__dirname, "../view/index.html"));
 });
 
 //------Users--------//
 
 route.post("/login", bodyParser.json(), (req, res) => {
-  user.login(req.res);
+  user.login(req, res);
 });
 
 route.get("/users", (req, res) => {
@@ -52,6 +52,10 @@ route.post("/product", bodyParser.json(), (req, res) => {
 
 route.put("/product/:id", bodyParser.json(), (req, res) => {
   product.updateProduct(req, res);
+});
+
+route.put("/product/:id", bodyParser.json(), (req, res) => {
+  product.forgotPassword(req, res);
 });
 
 route.delete("/product/:id", (req, res) => {
