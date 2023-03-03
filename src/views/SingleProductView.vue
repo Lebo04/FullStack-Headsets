@@ -1,7 +1,7 @@
 <template>
     <section>
     <div data-aos="zoom-in">
-      <h2>Product</h2>
+      <h1 class="heading animate__animated animate__zoomInUp">Product</h1>
       <div class="container-fluid">
         <div class="" id="cards"></div>
         <div class="row">

@@ -1,5 +1,5 @@
 <template>
-  <div class="reg">
+  <div class="reg animate__animated animate__zoomInUp">
     <form @submit.prevent="SignUp">
     <div class="container">
       <h1>Register</h1>
@@ -18,7 +18,7 @@
       <input type="text" v-model="register.emailAdd" placeholder="Enter Email" name="email" id="email" required>
 
       <label for="cellNumber"><b>Cell</b></label>
-      <input type="text" v-model="register.cellphoneNumber" placeholder="Enter Cellphone Number" name="cellNumber"
+      <input type="text" v-model="register.cellphoneNum" placeholder="Enter Cellphone Number" name="cellNumber"
         id="cellNumber" required>
 
       <label for="psw"><b>Password</b></label>
@@ -56,7 +56,7 @@ export default {
         firstName: '',
         lastName: '',
         gender: '',
-        cellphoneNumber: '',
+        cellphoneNum: '',
         emailAdd: '',
         userPass: '',
         userProfile: 'https://i.postimg.cc/3rZ0H0D8/profile-Image.png',
@@ -69,7 +69,7 @@ export default {
       firstName: '',
       lastName: '',
       gender: '',
-      cellphoneNumber: '',
+      cellphoneNum: '',
       emailAdd: '',
       userPass: '',
       userProfile: 'https://i.postimg.cc/3rZ0H0D8/profile-Image.png',
@@ -102,7 +102,7 @@ export default {
       this.register.firstName = '';
       this.register.lastName = '';
       this.register.gender = '';
-      this.register.cellphoneNumber = '';
+      this.register.cellphoneNum = '';
       this.register.emailAdd = '';
       this.register.userPass = '';
       this.register.joinDate = '';

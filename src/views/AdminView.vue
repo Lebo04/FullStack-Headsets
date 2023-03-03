@@ -1,6 +1,6 @@
 <template>
   <div class="admin">
-    <h1 class="heading">Users</h1>
+    <h1 class="heading animate__animated animate__zoomInUp">Users</h1>
     <button type="button" class="btn btn-edit mt-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal2">
       Edit user
     </button>
@@ -102,7 +102,7 @@
 
     </div>
 
-    <h1 class="heading">Products</h1>
+    <h1 class="heading animate__animated animate__zoomInUp">Products</h1>
 
     <button type="button" class="btn btn-edit mt-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal2">
       Create New Product

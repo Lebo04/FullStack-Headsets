@@ -1,7 +1,7 @@
 <template>
         <div class="background">
         <NavBar />
-        <h1 class="heading">Login</h1>
+        <h1 class="heading animate__animated animate__zoomInUp">Login</h1>
         <div class="bg-container d-flex">
             <div class="card my-auto" style="width: 60rem; height: 35rem">
                 <div class="card-body">
