@@ -76,12 +76,23 @@ export default createStore({
     async fetchProduct(context, id){
       const res = await axios.get(`${renderLink}/product/${id}`);
       const {
-        results
+        result
       } = await res.data;
-      context.commit('setProduct', results[0]);
+      console.log(result[0]);
+      context.commit('setProduct', result[0]);
+    },
+    async register(context, payload) {
+      const res = await axios.post(`${renderLink}/register`, payload);
+      const {msg, err} = await res.data;
+      if (msg) {
+        context.commit('setError', msg)
+      } else {
+        context.commit('setError',err)
+      }
     }
          
   },
+   
   
   modules: {
   }

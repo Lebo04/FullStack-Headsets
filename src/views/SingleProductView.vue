@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="" id="cards"></div>
         <div class="row">
-            <div class="col-3 card g-1 my-2 mx-2" v-for="product in products" :key="product">
+            <div class="col-3 card g-1 my-2 mx-2" >
               <!-- <img src="" id="img" alt="short-surfboard"> -->
               <div class="card-body">
                 <h5 class="name">{{ product.prodName }}</h5>
@@ -22,15 +22,16 @@
 
 <script>
 import { useStore } from 'vuex';
+import router from '@/router';
 import {computed} from '@vue/runtime-core'
 
 export default {
   setup() {
     const store = useStore();
-    store.dispatch("fetchProduct")
-    let products = computed(() => store.state.product);
+    store.dispatch("fetchProduct", router.params.id);
+    let product = computed(() => store.state.product);
     return{
-      products,
+      product,
     }
   }
 }
