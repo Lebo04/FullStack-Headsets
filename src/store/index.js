@@ -73,9 +73,16 @@ export default createStore({
         context.commit('setError', err)
       }
     },
-
+    async fetchProduct(context, id){
+      const res = await axios.get(`${renderLink}/product/${id}`);
+      const {
+        results
+      } = await res.data;
+      context.commit('setProduct', results[0]);
+    }
          
   },
+  
   modules: {
   }
 })
