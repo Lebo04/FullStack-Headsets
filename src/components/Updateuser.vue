@@ -1,5 +1,5 @@
 <template>
-    <h1>edit</h1>
+    <h1>Edit</h1>
     <form>
         <input type="text" class="form-control text-center w-75 mx-auto mb-2">
         <input type="text" class="form-control text-center w-75 mx-auto mb-2">
